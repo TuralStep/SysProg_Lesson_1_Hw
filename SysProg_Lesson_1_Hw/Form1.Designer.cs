@@ -32,6 +32,7 @@
             this.txt_proc = new System.Windows.Forms.TextBox();
             this.btn_createProc = new System.Windows.Forms.Button();
             this.btn_endProc = new System.Windows.Forms.Button();
+            this.btn_blackList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView
@@ -47,12 +48,12 @@
             // 
             this.txt_proc.Location = new System.Drawing.Point(12, 376);
             this.txt_proc.Name = "txt_proc";
-            this.txt_proc.Size = new System.Drawing.Size(492, 23);
+            this.txt_proc.Size = new System.Drawing.Size(368, 23);
             this.txt_proc.TabIndex = 1;
             // 
             // btn_createProc
             // 
-            this.btn_createProc.Location = new System.Drawing.Point(510, 375);
+            this.btn_createProc.Location = new System.Drawing.Point(386, 376);
             this.btn_createProc.Name = "btn_createProc";
             this.btn_createProc.Size = new System.Drawing.Size(136, 23);
             this.btn_createProc.TabIndex = 2;
@@ -61,18 +62,29 @@
             // 
             // btn_endProc
             // 
-            this.btn_endProc.Location = new System.Drawing.Point(652, 375);
+            this.btn_endProc.Location = new System.Drawing.Point(528, 376);
             this.btn_endProc.Name = "btn_endProc";
             this.btn_endProc.Size = new System.Drawing.Size(136, 23);
             this.btn_endProc.TabIndex = 3;
             this.btn_endProc.Text = "End Process";
             this.btn_endProc.UseVisualStyleBackColor = true;
             // 
+            // btn_blackList
+            // 
+            this.btn_blackList.Location = new System.Drawing.Point(670, 375);
+            this.btn_blackList.Name = "btn_blackList";
+            this.btn_blackList.Size = new System.Drawing.Size(118, 23);
+            this.btn_blackList.TabIndex = 4;
+            this.btn_blackList.Text = "Add to BlackList";
+            this.btn_blackList.UseVisualStyleBackColor = true;
+            this.btn_blackList.Click += new System.EventHandler(this.btn_blackList_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 408);
+            this.Controls.Add(this.btn_blackList);
             this.Controls.Add(this.btn_endProc);
             this.Controls.Add(this.btn_createProc);
             this.Controls.Add(this.txt_proc);
@@ -90,5 +102,6 @@
         private TextBox txt_proc;
         private Button btn_createProc;
         private Button btn_endProc;
+        private Button btn_blackList;
     }
 }
